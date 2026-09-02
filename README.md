@@ -6,6 +6,9 @@ AI-assisted three-way payment reconciliation for systems where `payments`, `sett
 
 A gateway may report a successful payment while settlement contains a fee-adjusted amount or the ledger has no corresponding entry. Razor Recon preserves the evidence, applies deterministic financial rules, identifies exceptions, and leaves an auditable lifecycle.
 
+The live demo connects to the Razor Recon frontend and demonstrates the reconciliation workflow, exception detection, and transaction analysis.
+https://razorrecon.netlify.app
+
 ## Architecture
 
 ```text
