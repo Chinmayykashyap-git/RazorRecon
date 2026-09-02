@@ -1,0 +1,30 @@
+services:
+	postgres:
+		image: postgres:17
+		container_name: razorrecon-postgres
+		environment:
+			POSTGRES_DB: razorrecon
+			POSTGRES_USER: postgres
+			POSTGRES_PASSWORD: postgres
+		ports:
+			- "5432:5432"
+		volumes:
+			- postgres_data:/var/lib/postgresql/data
+
+	backend:
+		build:
+			context: ./backend
+		container_name: razorrecon-backend
+		depends_on:
+			- postgres
+		environment:
+			SPRING_PROFILES_ACTIVE: postgres
+			SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/razorrecon
+			SPRING_DATASOURCE_USERNAME: postgres
+			SPRING_DATASOURCE_PASSWORD: postgres
+			CLAUDE_ENABLED: "false"
+		ports:
+			- "8080:8080"
+
+volumes:
+	postgres_data:

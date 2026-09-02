@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-RazorReconApplication<razorrecon>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.razorrecon.RazorReconApplication",
+            "projectName": "razorrecon",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
