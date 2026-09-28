@@ -1,6 +1,6 @@
 # Razor Recon
 
-AI-assisted three-way payment reconciliation for systems where `payments`, `settlements`, and the merchant `ledger` can disagree.
+AI assisted three-way payment reconciliation for systems where `payments`, `settlements`, and the merchant `ledger` can disagree.
 
 ## Problem
 
